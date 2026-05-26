@@ -39,3 +39,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# claude
+.claude/
+
+# user uploads (managed via CMS)
+/public/uploads/*
+!/public/uploads/.gitkeep
+
+# CMS content data
+/content/posts/*
+!/content/posts/.gitkeep
+/content/pages/*
+!/content/pages/.gitkeep
+/content/media.json
