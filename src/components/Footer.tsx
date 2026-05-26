@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
+import QRCodeModal from "./QRCode";
 
 const svgProps = { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", fill: "currentColor" } as const;
 function FacebookIcon({ className }: { className?: string }) {
@@ -171,7 +172,7 @@ export default function Footer() {
                 </span>
               </div>
             </div>
-            <div className="mt-6">
+            <div className="mt-6 space-y-3">
               <a
                 href="https://www.afge.org"
                 target="_blank"
@@ -180,6 +181,9 @@ export default function Footer() {
               >
                 AFGE National Website
               </a>
+              <div>
+                <QRCodeModal />
+              </div>
             </div>
           </div>
         </div>

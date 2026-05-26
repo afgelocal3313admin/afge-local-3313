@@ -17,37 +17,32 @@ import AISearch from "./AISearch";
 const navigation = [
   { name: "Home", href: "/" },
   {
-    name: "Who We Are",
+    name: "About",
     href: "/about",
     children: [
       { name: "About Local 3313", href: "/about" },
-      { name: "Union Officials", href: "/union-officials" },
-      { name: "President’s Message", href: "/presidents-message" },
-      { name: "Bylaws", href: "/docs/AFGE-Bylaws.pdf", external: true },
-      { name: "Labor-Management Forums", href: "/labor-management-forums" },
       { name: "In The News", href: "/in-the-news" },
+      { name: "Bylaws", href: "/docs/AFGE-Bylaws.pdf", external: true },
       { name: "Contact Us", href: "/contact" },
     ],
   },
   {
-    name: "Why Join?",
+    name: "Leadership",
+    href: "/union-officials",
+    children: [
+      { name: "Union Officials", href: "/union-officials" },
+      { name: "President’s Message", href: "/presidents-message" },
+      { name: "Labor-Management Forums", href: "/labor-management-forums" },
+    ],
+  },
+  {
+    name: "Membership",
     href: "/how-to-join",
     children: [
       { name: "How to Join", href: "/how-to-join" },
       { name: "New Member Orientation", href: "/new-member-orientation" },
       { name: "Member Benefits", href: "/benefits" },
-      { name: "Meeting Recordings", href: "/meeting-recordings" },
-      { name: "Events & Meetings", href: "/events" },
-    ],
-  },
-  {
-    name: "What We Do",
-    href: "/resources",
-    children: [
       { name: "FAQ", href: "/faq" },
-      { name: "File a Grievance", href: "/grievance" },
-      { name: "Collective Bargaining Agreements", href: "/collective-bargaining-agreements" },
-      { name: "Prohibited Practices", href: "/prohibited-practices" },
     ],
   },
   {
@@ -55,15 +50,14 @@ const navigation = [
     href: "/resources",
     children: [
       { name: "Documents & Forms", href: "/resources" },
-      { name: "Weingarten Rights", href: "/docs/WEINGARTEN_RIGHTS.pdf", external: true },
-      { name: "Dues Deduction Form (SF-1187)", href: "/docs/SF-1187-Dues-Deduction.pdf", external: true },
-      { name: "AFGE National", href: "https://www.afge.org", external: true },
-      { name: "AFGE District 14", href: "https://www.afge.org/districts/district-14", external: true },
-      { name: "USAJobs", href: "https://www.usajobs.gov", external: true },
+      { name: "Collective Bargaining Agreements", href: "/collective-bargaining-agreements" },
+      { name: "File a Grievance", href: "/grievance" },
+      { name: "Prohibited Practices", href: "/prohibited-practices" },
+      { name: "Meeting Recordings", href: "/meeting-recordings" },
     ],
   },
   { name: "News", href: "/news" },
-  { name: "Contact", href: "/contact" },
+  { name: "Events", href: "/events" },
 ];
 
 export default function Header() {

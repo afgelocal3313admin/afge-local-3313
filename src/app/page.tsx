@@ -9,6 +9,10 @@ import {
   CheckCircle,
   Calendar,
   Newspaper,
+  BookOpen,
+  Download,
+  Phone,
+  UserPlus,
 } from "lucide-react";
 import Newsletter from "@/components/Newsletter";
 
@@ -143,6 +147,33 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Quick Access Toolbar */}
+      <section className="bg-white border-b border-gray-100 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 divide-x divide-gray-100">
+            {[
+              { icon: UserPlus, label: "Join Now", href: "/how-to-join", color: "text-union-red" },
+              { icon: Scale, label: "Your CBA", href: "/collective-bargaining-agreements", color: "text-union-blue" },
+              { icon: Shield, label: "Know Your Rights", href: "/resources", color: "text-green-600" },
+              { icon: Phone, label: "Get Help", href: "/grievance", color: "text-amber-600" },
+              { icon: Download, label: "Forms & Docs", href: "/resources", color: "text-purple-600" },
+              { icon: BookOpen, label: "FAQ", href: "/faq", color: "text-sky-600" },
+            ].map((action) => (
+              <Link
+                key={action.label}
+                href={action.href}
+                className="flex flex-col items-center gap-2 py-5 hover:bg-gray-50 transition-colors group"
+              >
+                <action.icon className={`w-6 h-6 ${action.color} group-hover:scale-110 transition-transform`} />
+                <span className="text-xs font-semibold text-gray-600 group-hover:text-gray-900 text-center">
+                  {action.label}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Agencies Bar */}
       <section className="bg-union-light py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -224,7 +255,7 @@ export default function Home() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
-              href="/contact"
+              href="/how-to-join"
               className="px-8 py-3.5 bg-union-gold text-union-blue-dark rounded-lg font-bold hover:bg-yellow-400 transition-colors"
             >
               Become a Member

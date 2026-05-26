@@ -5,6 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import SocialBar from "./SocialBar";
 import AIChatWidget from "./AIChatWidget";
+import ShareButton from "./ShareButton";
 
 export default function SiteShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -20,6 +21,7 @@ export default function SiteShell({ children }: { children: React.ReactNode }) {
       <main className="flex-1">{children}</main>
       <Footer />
       <SocialBar />
+      <ShareButton />
       <AIChatWidget />
     </>
   );
