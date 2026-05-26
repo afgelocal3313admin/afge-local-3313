@@ -67,14 +67,14 @@ export default function Footer() {
               {[
                 { name: "About Us", href: "/about" },
                 { name: "Union Officials", href: "/union-officials" },
-                { name: "President's Message", href: "/presidents-message" },
                 { name: "How to Join", href: "/how-to-join" },
                 { name: "Member Benefits", href: "/benefits" },
                 { name: "News & Updates", href: "/news" },
-                { name: "Events & Meetings", href: "/events" },
-                { name: "Resources", href: "/resources" },
-                { name: "Meeting Recordings", href: "/meeting-recordings" },
+                { name: "Resources & Documents", href: "/resources" },
+                { name: "Collective Bargaining Agreements", href: "/collective-bargaining-agreements" },
+                { name: "Prohibited Practices", href: "/prohibited-practices" },
                 { name: "Grievance Process", href: "/grievance" },
+                { name: "Meeting Recordings", href: "/meeting-recordings" },
                 { name: "In The News", href: "/in-the-news" },
                 { name: "FAQ", href: "/faq" },
               ].map((link) => (

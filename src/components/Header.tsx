@@ -16,38 +16,53 @@ import AISearch from "./AISearch";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
   {
-    name: "Membership",
-    href: "/benefits",
+    name: "Who We Are",
+    href: "/about",
     children: [
-      { name: "Member Benefits", href: "/benefits" },
-      { name: "How to Join", href: "/how-to-join" },
-      { name: "New Member Orientation", href: "/new-member-orientation" },
-      { name: "FAQ", href: "/faq" },
+      { name: "About Local 3313", href: "/about" },
+      { name: "Union Officials", href: "/union-officials" },
+      { name: "President’s Message", href: "/presidents-message" },
+      { name: "Bylaws", href: "/docs/AFGE-Bylaws.pdf", external: true },
+      { name: "Labor-Management Forums", href: "/labor-management-forums" },
+      { name: "In The News", href: "/in-the-news" },
+      { name: "Contact Us", href: "/contact" },
     ],
   },
   {
-    name: "Leadership",
-    href: "/union-officials",
+    name: "Why Join?",
+    href: "/how-to-join",
     children: [
-      { name: "Union Officials", href: "/union-officials" },
-      { name: "President’s Message", href: "/presidents-message" },
-      { name: "Labor-Management Forums", href: "/labor-management-forums" },
+      { name: "How to Join", href: "/how-to-join" },
+      { name: "New Member Orientation", href: "/new-member-orientation" },
+      { name: "Member Benefits", href: "/benefits" },
+      { name: "Meeting Recordings", href: "/meeting-recordings" },
+      { name: "Events & Meetings", href: "/events" },
+    ],
+  },
+  {
+    name: "What We Do",
+    href: "/resources",
+    children: [
+      { name: "FAQ", href: "/faq" },
+      { name: "File a Grievance", href: "/grievance" },
+      { name: "Collective Bargaining Agreements", href: "/collective-bargaining-agreements" },
+      { name: "Prohibited Practices", href: "/prohibited-practices" },
     ],
   },
   {
     name: "Resources",
     href: "/resources",
     children: [
-      { name: "Documents & CBAs", href: "/resources" },
-      { name: "Grievance Process", href: "/grievance" },
-      { name: "Meeting Recordings", href: "/meeting-recordings" },
-      { name: "In The News", href: "/in-the-news" },
+      { name: "Documents & Forms", href: "/resources" },
+      { name: "Weingarten Rights", href: "/docs/WEINGARTEN_RIGHTS.pdf", external: true },
+      { name: "Dues Deduction Form (SF-1187)", href: "/docs/SF-1187-Dues-Deduction.pdf", external: true },
+      { name: "AFGE National", href: "https://www.afge.org", external: true },
+      { name: "AFGE District 14", href: "https://www.afge.org/districts/district-14", external: true },
+      { name: "USAJobs", href: "https://www.usajobs.gov", external: true },
     ],
   },
   { name: "News", href: "/news" },
-  { name: "Events", href: "/events" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -129,16 +144,31 @@ export default function Header() {
                       <ChevronDown className="w-4 h-4" />
                     </Link>
                     {openDropdown === item.name && (
-                      <div className="absolute top-full left-0 bg-white rounded-lg shadow-xl py-2 min-w-[220px] border border-gray-100">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className="block px-4 py-2.5 text-gray-700 hover:bg-union-light hover:text-union-blue transition-colors"
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
+                      <div className="absolute top-full left-0 bg-white rounded-lg shadow-xl py-2 min-w-[240px] border border-gray-100">
+                        {item.children.map((child) =>
+                          (child as any).external ? (
+                            <a
+                              key={child.href}
+                              href={child.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center justify-between px-4 py-2.5 text-gray-700 hover:bg-union-light hover:text-union-blue transition-colors"
+                            >
+                              {child.name}
+                              <svg className="w-3.5 h-3.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                              </svg>
+                            </a>
+                          ) : (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              className="block px-4 py-2.5 text-gray-700 hover:bg-union-light hover:text-union-blue transition-colors"
+                            >
+                              {child.name}
+                            </Link>
+                          )
+                        )}
                       </div>
                     )}
                   </div>
@@ -203,16 +233,32 @@ export default function Header() {
                     </button>
                     {openDropdown === item.name && (
                       <div className="pl-4 space-y-1">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className="block px-3 py-2 text-white/80 hover:text-union-gold transition-colors"
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
+                        {item.children.map((child) =>
+                          (child as any).external ? (
+                            <a
+                              key={child.href}
+                              href={child.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-2 px-3 py-2 text-white/80 hover:text-union-gold transition-colors"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {child.name}
+                              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                              </svg>
+                            </a>
+                          ) : (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              className="block px-3 py-2 text-white/80 hover:text-union-gold transition-colors"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {child.name}
+                            </Link>
+                          )
+                        )}
                       </div>
                     )}
                   </div>
