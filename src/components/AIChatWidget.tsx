@@ -25,7 +25,7 @@ function getAIResponse(input: string): string {
     return 'You have Weingarten Rights! If called into a meeting that could lead to discipline, you can say: "I request my union representative be present. Until my representative arrives, I choose not to answer any questions." Visit /resources to download your Weingarten Rights card.';
   }
   if (q.includes("steward") || q.includes("representative")) {
-    return "Your union steward is your first point of contact for workplace issues. Each DOT agency has assigned stewards. Visit our Union Officials page at /union-officials to find your agency's steward, or email info@afge-local3313.org.";
+    return "Your union steward is your first point of contact for workplace issues. Each DOT agency has assigned stewards. Visit our Union Officials page at /union-officials to find your agency's steward, or email askafgelocal3313@outlook.com.";
   }
   if (q.includes("join") || q.includes("member") || q.includes("signup") || q.includes("dues")) {
     return "To join AFGE Local 3313, visit /how-to-join for step-by-step instructions. You can join online at join.afge.org/L3313 or complete an SF-1187 form. New members should also check out /new-member-orientation for everything you need to know!";
@@ -63,7 +63,7 @@ function getAIResponse(input: string): string {
   if (q.includes("hello") || q.includes("hi") || q.includes("hey")) {
     return "Hello! 👋 I'm the AFGE Local 3313 AI assistant. I can help you find information about your union rights, grievance procedures, membership, and more. What would you like to know?";
   }
-  return "I can help with questions about grievances, Weingarten rights, membership, your CBA, pay issues, meetings, and more. For specific workplace issues, please contact your union steward or email info@afge-local3313.org. What would you like to know?";
+  return "I can help with questions about grievances, Weingarten rights, membership, your CBA, pay issues, meetings, and more. For specific workplace issues, please contact your union steward or email askafgelocal3313@outlook.com. What would you like to know?";
 }
 
 export default function AIChatWidget() {

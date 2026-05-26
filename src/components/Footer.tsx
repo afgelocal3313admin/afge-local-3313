@@ -151,10 +151,10 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-union-gold mt-1 shrink-0" />
                 <a
-                  href="mailto:info@afge-local3313.org"
+                  href="mailto:askafgelocal3313@outlook.com"
                   className="text-white/70 hover:text-union-gold transition-colors text-sm"
                 >
-                  info@afge-local3313.org
+                  askafgelocal3313@outlook.com
                 </a>
               </div>
               <div className="flex items-start gap-3">

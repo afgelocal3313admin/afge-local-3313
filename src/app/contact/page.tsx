@@ -42,10 +42,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-union-blue">Email</h3>
                     <a
-                      href="mailto:info@afge-local3313.org"
+                      href="mailto:askafgelocal3313@outlook.com"
                       className="text-gray-600 hover:text-union-blue transition-colors"
                     >
-                      info@afge-local3313.org
+                      askafgelocal3313@outlook.com
                     </a>
                   </div>
                 </div>
