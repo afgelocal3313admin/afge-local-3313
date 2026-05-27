@@ -21,33 +21,47 @@ const agencies = [
     name: "NHTSA",
     full: "National Highway Traffic Safety Administration",
     logo: "/images/agencies/nhtsa.png",
+    members: 270,
+    mission: "Saves lives, prevents injuries, and reduces economic costs due to road traffic crashes through education, research, safety standards, and enforcement.",
   },
   {
     name: "FMCSA",
     full: "Federal Motor Carrier Safety Administration",
     logo: "/images/agencies/fmcsa.png",
+    members: 207,
+    mission: "Reduces crashes, injuries, and fatalities by advancing large truck and bus safety through collaboration, education, research, technology, and compliance.",
   },
   {
     name: "FTA",
     full: "Federal Transit Administration",
     logo: "/images/agencies/fta.png",
+    members: 190,
+    mission: "Provides financial and technical assistance to local public transit systems, including buses, subways, light rail, commuter rail, and ferry boats.",
   },
   {
     name: "PHMSA",
     full: "Pipeline and Hazardous Materials Safety Administration",
     logo: "/images/agencies/phmsa.png",
+    members: 190,
+    mission: "Protects people and the environment by advancing the safe transportation of energy and other hazardous materials essential to our daily lives.",
   },
   {
     name: "MARAD",
     full: "Maritime Administration",
     logo: "/images/agencies/marad.png",
+    members: 168,
+    mission: "Fosters, promotes, and develops the maritime industry of the United States to meet the nation's economic and security needs.",
   },
   {
     name: "OST",
     full: "Office of the Secretary of Transportation",
     logo: "/images/agencies/ost.png",
+    members: 450,
+    mission: "Oversees the formulation of national transportation policy and promotes intermodal transportation. Houses the Secretary's immediate staff and key offices.",
   },
 ];
+
+const totalMembers = agencies.reduce((sum, a) => sum + a.members, 0);
 
 const features = [
   {
@@ -174,28 +188,80 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Agencies Bar */}
-      <section className="bg-union-light py-12">
+      {/* Bargaining Unit Strength */}
+      <section className="bg-union-blue text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm font-semibold text-union-blue/60 uppercase tracking-wider mb-8">
-            Representing Employees Across DOT Agencies
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+            <div>
+              <p className="text-4xl sm:text-5xl font-bold text-union-gold">{totalMembers.toLocaleString()}+</p>
+              <p className="text-white/70 text-sm mt-1">Bargaining Unit Employees</p>
+            </div>
+            <div>
+              <p className="text-4xl sm:text-5xl font-bold text-union-gold">6</p>
+              <p className="text-white/70 text-sm mt-1">DOT Agencies</p>
+            </div>
+            <div>
+              <p className="text-4xl sm:text-5xl font-bold text-union-gold">5</p>
+              <p className="text-white/70 text-sm mt-1">Active CBAs</p>
+            </div>
+            <div>
+              <p className="text-4xl sm:text-5xl font-bold text-union-gold">1</p>
+              <p className="text-white/70 text-sm mt-1">United Voice</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Agencies — Who We Represent */}
+      <section className="py-20 bg-union-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-union-blue">
+              Agencies We Represent
+            </h2>
+            <div className="section-divider w-20 mx-auto mt-4" />
+            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+              AFGE Local 3313 represents {totalMembers.toLocaleString()}+ bargaining unit employees across
+              six DOT agencies. Here&apos;s who we serve and what each agency does.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {agencies.map((agency) => (
               <div
                 key={agency.name}
-                className="flex flex-col items-center gap-2 group"
+                className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-lg transition-all group"
               >
-                <Image
-                  src={agency.logo}
-                  alt={agency.full}
-                  width={48}
-                  height={48}
-                  className="h-12 w-auto opacity-70 group-hover:opacity-100 transition-opacity"
-                />
-                <span className="text-xs font-semibold text-union-blue/70 group-hover:text-union-blue transition-colors">
-                  {agency.name}
-                </span>
+                <div className="flex items-center gap-3 mb-4">
+                  <Image
+                    src={agency.logo}
+                    alt={agency.full}
+                    width={44}
+                    height={44}
+                    className="h-11 w-auto"
+                  />
+                  <div>
+                    <h3 className="text-lg font-bold text-union-blue">
+                      {agency.name}
+                    </h3>
+                    <p className="text-xs text-gray-500">{agency.full}</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  {agency.mission}
+                </p>
+                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                  <div>
+                    <p className="text-2xl font-bold text-union-blue">{agency.members}</p>
+                    <p className="text-xs text-gray-500">Bargaining Employees</p>
+                  </div>
+                  <Link
+                    href="/union-officials"
+                    className="text-xs font-semibold text-union-blue hover:text-union-red transition-colors"
+                  >
+                    View Reps &rarr;
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
@@ -239,8 +305,8 @@ export default function Home() {
       {/* CTA Banner */}
       <section className="relative py-20">
         <Image
-          src="/images/banners/join.jpg"
-          alt="Join AFGE Local 3313"
+          src="/images/rally/rally-march.jpg"
+          alt="AFGE members marching for federal employee rights"
           fill
           className="object-cover"
         />

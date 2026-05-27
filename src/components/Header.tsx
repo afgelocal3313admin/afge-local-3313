@@ -57,7 +57,14 @@ const navigation = [
     ],
   },
   { name: "News", href: "/news" },
-  { name: "Events", href: "/events" },
+  {
+    name: "Meetings & Events",
+    href: "/events",
+    children: [
+      { name: "Events & Meetings", href: "/events" },
+      { name: "Meeting Recordings", href: "/meeting-recordings" },
+    ],
+  },
 ];
 
 export default function Header() {

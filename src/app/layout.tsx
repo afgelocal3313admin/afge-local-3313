@@ -30,11 +30,18 @@ export const metadata: Metadata = {
     "federal employees",
     "labor union",
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.json",
   openGraph: {
     title: "AFGE Local 3313",
     description:
       "Representing Department of Transportation employees. Protecting your rights, advocating for fair treatment.",
-    url: "https://afge-local3313.org",
+    url: "https://www.afgelocal3313.org",
     siteName: "AFGE Local 3313",
     type: "website",
   },
