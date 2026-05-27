@@ -45,7 +45,7 @@ export default function Footer() {
               <a href="https://www.instagram.com/afgeunion" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-pink-600 transition-colors" aria-label="Instagram">
                 <InstagramIcon className="w-4 h-4" />
               </a>
-              <a href="https://www.youtube.com/@thomasholmes2635" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-red-600 transition-colors" aria-label="YouTube">
+              <a href="https://www.youtube.com/channel/UCj1j_trBMcPYAND7SCYJnWg" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-red-600 transition-colors" aria-label="YouTube">
                 <YoutubeIcon className="w-4 h-4" />
               </a>
             </div>

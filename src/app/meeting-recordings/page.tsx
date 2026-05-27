@@ -13,7 +13,7 @@ const featuredRecording = {
   title: "Employee Rights Lunch Meeting",
   date: "January 23, 2025",
   duration: "45 min",
-  youtubeId: "dQw4w9WgXcQ", // Placeholder — replace with actual AFGE video ID
+  youtubeId: "IM_lBXY1rgk",
   description:
     "Overview of employee rights under the Federal Service Labor-Management Relations Statute, including Weingarten rights and protections against unfair labor practices.",
   topics: ["Weingarten Rights", "ULP Protections", "Grievance Process"],
@@ -100,7 +100,7 @@ export default function MeetingRecordingsPage() {
               </p>
             </div>
             <a
-              href="https://www.youtube.com/@thomasholmes2635"
+              href="https://www.youtube.com/channel/UCj1j_trBMcPYAND7SCYJnWg"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors"
@@ -273,7 +273,7 @@ export default function MeetingRecordingsPage() {
               posted. Never miss an important union update.
             </p>
             <a
-              href="https://www.youtube.com/@thomasholmes2635"
+              href="https://www.youtube.com/channel/UCj1j_trBMcPYAND7SCYJnWg"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition-colors"

@@ -40,7 +40,7 @@ const socials = [
   {
     name: "YouTube",
     icon: YoutubeIcon,
-    url: "https://www.youtube.com/@thomasholmes2635",
+    url: "https://www.youtube.com/channel/UCj1j_trBMcPYAND7SCYJnWg",
     color: "hover:bg-red-600",
   },
 ];
