@@ -23,13 +23,19 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <Image
-              src="/images/logos/logo-white.png"
-              alt="AFGE Local 3313"
-              width={180}
-              height={45}
-              className="h-10 w-auto mb-4"
-            />
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/images/logos/afge-3313-icon.png"
+                alt="AFGE Local 3313"
+                width={48}
+                height={48}
+                className="h-12 w-12"
+              />
+              <div>
+                <p className="text-white font-bold text-lg">AFGE Local 3313</p>
+                <p className="text-union-gold text-xs font-medium">Proud to Make America Work</p>
+              </div>
+            </div>
             <p className="text-white/70 text-sm leading-relaxed mt-4">
               Representing employees of the U.S. Department of Transportation.
               Protecting your rights, advocating for fair wages, and ensuring

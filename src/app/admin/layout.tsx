@@ -134,9 +134,7 @@ function AdminSidebar() {
     <aside className="w-64 bg-gray-900 border-r border-gray-800 min-h-screen flex flex-col">
       <div className="p-5 border-b border-gray-800">
         <Link href="/admin" className="flex items-center gap-3">
-          <div className="w-9 h-9 bg-union-blue rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">A</span>
-          </div>
+          <img src="/images/logos/afge-3313-icon.png" alt="AFGE 3313" className="w-9 h-9 rounded-lg" />
           <div>
             <h2 className="text-white font-bold text-sm">AFGE Local 3313</h2>
             <p className="text-gray-500 text-xs">Admin Panel</p>

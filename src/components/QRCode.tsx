@@ -95,7 +95,7 @@ export default function QRCodeModal() {
                   bgColor="#ffffff"
                   fgColor="#003366"
                   imageSettings={{
-                    src: "/images/logos/logo-icon.jpg",
+                    src: "/images/logos/afge-3313-icon.png",
                     height: 35,
                     width: 35,
                     excavate: true,

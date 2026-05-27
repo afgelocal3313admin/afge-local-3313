@@ -119,13 +119,14 @@ export default function Header() {
           <div className="flex justify-between items-center h-20">
             <Link href="/" className="flex items-center gap-3 shrink-0">
               <Image
-                src="/images/logos/logo-white.png"
+                src="/images/logos/afge-3313-icon.png"
                 alt="AFGE Local 3313"
-                width={200}
-                height={50}
-                className="h-12 w-auto"
+                width={48}
+                height={48}
+                className="h-12 w-12"
                 priority
               />
+              <span className="text-white font-bold text-lg hidden sm:block">AFGE Local 3313</span>
             </Link>
 
             <div className="hidden lg:flex items-center gap-1">

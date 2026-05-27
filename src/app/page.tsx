@@ -117,47 +117,53 @@ const newsItems = [
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative min-h-[600px] flex items-center">
-        <Image
-          src="/images/banners/hero-main.jpg"
-          alt="AFGE Local 3313"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="hero-gradient absolute inset-0" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="max-w-3xl">
-            <div className="inline-block px-4 py-1.5 bg-union-gold/20 border border-union-gold/40 rounded-full text-union-gold text-sm font-medium mb-6">
-              American Federation of Government Employees
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              AFGE Local 3313
-            </h1>
-            <p className="mt-4 text-xl sm:text-2xl text-white/90 font-light">
-              Representing Department of Transportation Employees
-            </p>
-            <p className="mt-6 text-lg text-white/75 max-w-2xl leading-relaxed">
-              Protecting your rights, advocating for fair treatment, and
-              ensuring safe working conditions for federal employees across DOT
-              agencies.
-            </p>
+      {/* Hero Section with Banner */}
+      <section className="relative">
+        {/* Banner Image */}
+        <div className="bg-white">
+          <div className="max-w-7xl mx-auto">
+            <Image
+              src="/images/logos/afge-3313-banner.png"
+              alt="AFGE 3313 — Proud to Make America Work — American Federation of Government Employees, United States Department of Transportation"
+              width={1600}
+              height={400}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+        </div>
+        {/* Hero Content */}
+        <div className="relative min-h-[400px] flex items-center">
+          <Image
+            src="/images/rally/rally-convention.jpg"
+            alt="AFGE members at national convention"
+            fill
+            className="object-cover"
+          />
+          <div className="hero-gradient absolute inset-0" />
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="max-w-3xl">
+              <p className="mt-6 text-lg text-white/90 max-w-2xl leading-relaxed">
+                Protecting your rights, advocating for fair treatment, and
+                ensuring safe working conditions for federal employees across DOT
+                agencies.
+              </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href="/benefits"
+                href="/how-to-join"
                 className="px-8 py-3.5 bg-union-red text-white rounded-lg font-semibold hover:bg-red-700 transition-colors flex items-center gap-2"
               >
-                Member Benefits <ArrowRight className="w-4 h-4" />
+                Join the Union <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/about"
+                href="/benefits"
                 className="px-8 py-3.5 bg-white/10 backdrop-blur text-white border border-white/30 rounded-lg font-semibold hover:bg-white/20 transition-colors"
               >
-                Learn About Us
+                Member Benefits
               </Link>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
@@ -262,6 +268,41 @@ export default function Home() {
                     View Reps &rarr;
                   </Link>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Rally Photo Gallery */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-union-blue">
+              Our Union in Action
+            </h2>
+            <p className="text-gray-500 text-sm mt-2">
+              AFGE members standing together for federal employees&apos; rights
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              { src: "/images/rally/rally-union-love.jpg", alt: "AFGE member holding I Love My Union sign" },
+              { src: "/images/rally/rally-march-dc.jpg", alt: "AFGE members marching in Washington DC" },
+              { src: "/images/rally/rally-red-shirts.jpg", alt: "AFGE rally with red shirts" },
+              { src: "/images/rally/rally-respect-signs.jpg", alt: "Members holding Respect Federal Employees signs" },
+              { src: "/images/rally/rally-night.jpg", alt: "AFGE night rally" },
+              { src: "/images/rally/rally-convention.jpg", alt: "AFGE national convention" },
+              { src: "/images/rally/rally-union-signs.jpg", alt: "Union members with signs" },
+              { src: "/images/rally/rally-march.jpg", alt: "AFGE legislative conference" },
+            ].map((photo) => (
+              <div key={photo.src} className="relative aspect-[3/2] rounded-lg overflow-hidden group">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
             ))}
           </div>
