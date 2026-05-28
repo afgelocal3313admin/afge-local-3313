@@ -42,6 +42,7 @@ const navigation = [
       { name: "How to Join", href: "/how-to-join" },
       { name: "New Member Orientation", href: "/new-member-orientation" },
       { name: "Member Benefits", href: "/benefits" },
+      { name: "Where Do My Dues Go?", href: "/where-do-my-dues-go" },
       { name: "FAQ", href: "/faq" },
     ],
   },
@@ -116,17 +117,20 @@ export default function Header() {
       {/* Main Nav */}
       <nav className="bg-union-blue shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <Link href="/" className="flex items-center gap-3 shrink-0">
+          <div className="flex justify-between items-center h-16">
+            <Link href="/" className="flex items-center gap-2 shrink-0">
               <Image
                 src="/images/logos/afge-3313-icon.png"
                 alt="AFGE Local 3313"
-                width={48}
-                height={48}
-                className="h-12 w-12"
+                width={40}
+                height={40}
+                className="h-10 w-10"
                 priority
               />
-              <span className="text-white font-bold text-lg hidden sm:block">AFGE Local 3313</span>
+              <div className="hidden sm:block leading-tight">
+                <span className="text-white font-bold text-sm block">AFGE Local 3313</span>
+                <span className="text-union-gold text-[10px] font-medium">Proud to Make America Work</span>
+              </div>
             </Link>
 
             <div className="hidden lg:flex items-center gap-1">

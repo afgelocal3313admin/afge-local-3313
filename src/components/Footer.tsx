@@ -76,6 +76,7 @@ export default function Footer() {
                 { name: "Union Officials", href: "/union-officials" },
                 { name: "How to Join", href: "/how-to-join" },
                 { name: "Member Benefits", href: "/benefits" },
+                { name: "Where Do My Dues Go?", href: "/where-do-my-dues-go" },
                 { name: "News & Updates", href: "/news" },
                 { name: "Resources & Documents", href: "/resources" },
                 { name: "Collective Bargaining Agreements", href: "/collective-bargaining-agreements" },

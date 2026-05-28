@@ -174,7 +174,7 @@ export default function MeetingRecordingsPage() {
       {/* Rally Image Banner */}
       <section className="relative py-16">
         <Image
-          src="/images/rally/rally-union-love.jpg"
+          src="/images/rally/rally-red-shirts.jpg"
           alt="AFGE members at a rally"
           fill
           className="object-cover"

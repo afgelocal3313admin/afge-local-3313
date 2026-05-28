@@ -117,23 +117,23 @@ const newsItems = [
 export default function Home() {
   return (
     <>
-      {/* Hero Section with Banner */}
-      <section className="relative">
-        {/* Banner Image */}
-        <div className="bg-white">
-          <div className="max-w-7xl mx-auto">
-            <Image
-              src="/images/logos/afge-3313-banner.png"
-              alt="AFGE 3313 — Proud to Make America Work — American Federation of Government Employees, United States Department of Transportation"
-              width={1600}
-              height={400}
-              className="w-full h-auto"
-              priority
-            />
-          </div>
+      {/* Banner */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto">
+          <Image
+            src="/images/logos/afge-3313-banner.png"
+            alt="AFGE Local 3313 — Proud to Make America Work"
+            width={1916}
+            height={821}
+            className="w-full h-auto max-h-[280px] object-contain"
+            priority
+          />
         </div>
-        {/* Hero Content */}
-        <div className="relative min-h-[400px] flex items-center">
+      </section>
+
+      {/* Hero Section */}
+      <section className="relative">
+        <div className="relative min-h-[350px] flex items-center">
           <Image
             src="/images/rally/rally-convention.jpg"
             alt="AFGE members at national convention"
@@ -285,16 +285,14 @@ export default function Home() {
               AFGE members standing together for federal employees&apos; rights
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {[
-              { src: "/images/rally/rally-union-love.jpg", alt: "AFGE member holding I Love My Union sign" },
               { src: "/images/rally/rally-march-dc.jpg", alt: "AFGE members marching in Washington DC" },
               { src: "/images/rally/rally-red-shirts.jpg", alt: "AFGE rally with red shirts" },
               { src: "/images/rally/rally-respect-signs.jpg", alt: "Members holding Respect Federal Employees signs" },
               { src: "/images/rally/rally-night.jpg", alt: "AFGE night rally" },
               { src: "/images/rally/rally-convention.jpg", alt: "AFGE national convention" },
               { src: "/images/rally/rally-union-signs.jpg", alt: "Union members with signs" },
-              { src: "/images/rally/rally-march.jpg", alt: "AFGE legislative conference" },
             ].map((photo) => (
               <div key={photo.src} className="relative aspect-[3/2] rounded-lg overflow-hidden group">
                 <Image
@@ -346,7 +344,7 @@ export default function Home() {
       {/* CTA Banner */}
       <section className="relative py-20">
         <Image
-          src="/images/rally/rally-march.jpg"
+          src="/images/rally/rally-march-dc.jpg"
           alt="AFGE members marching for federal employee rights"
           fill
           className="object-cover"
